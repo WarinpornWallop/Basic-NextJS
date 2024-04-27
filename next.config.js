@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["upload.wikimedia.org", "raw.githubusercontent.com"], //Domain ภายนอกของรูป ตอนที่เอารูปมาเป็นลิงก์
+    domains: [
+      "upload.wikimedia.org",
+      "raw.githubusercontent.com",
+      "cdn.dummyjson.com",
+    ], //Domain ภายนอกของรูป ตอนที่เอารูปมาเป็นลิงก์
   },
 };
 

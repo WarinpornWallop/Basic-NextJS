@@ -8,14 +8,14 @@ import { usePathname } from "next/navigation";
 function Sidebar() {
   const imageStyle = {
     borderRadius: "50%",
-    border: "1px solid #fff",
+    border: "8px solid #fff",
   };
   const pathname = usePathname();
   return (
     <div>
       <aside
         id="cta-button-sidebar"
-        className="fix top-0 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed top-0 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-[#FF9398]">
@@ -26,6 +26,7 @@ function Sidebar() {
               height={200}
               alt="profile image"
               style={imageStyle}
+              className="mx-8 my-4"
             />
           </div>
 
@@ -37,7 +38,9 @@ function Sidebar() {
                   !pathname.includes("/about") &&
                   !pathname.includes("/skills") &&
                   !pathname.includes("/education") &&
-                  !pathname.includes("/contact") 
+                  !pathname.includes("/contact") &&
+                  !pathname.includes("/cart") &&
+                  !pathname.includes("/pokemon")
                     ? "bg-primary text-white"
                     : ""
                 }`}
@@ -69,9 +72,7 @@ function Sidebar() {
               <a
                 href="/education"
                 className={`flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group ${
-                  pathname.includes("/education")
-                    ? "bg-primary text-white"
-                    : ""
+                  pathname.includes("/education") ? "bg-primary text-white" : ""
                 }`}
               >
                 <span className="flex-1 ms-3 whitespace-nowrap">Education</span>
@@ -85,6 +86,26 @@ function Sidebar() {
                 }`}
               >
                 <span className="flex-1 ms-3 whitespace-nowrap">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/pokemon"
+                className={`flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group ${
+                  pathname.includes("/pokemon") ? "bg-primary text-white" : ""
+                }`}
+              >
+                <span className="flex-1 ms-3 whitespace-nowrap">Pokemon</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/cart"
+                className={`flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group ${
+                  pathname.includes("/cart") ? "bg-primary text-white" : ""
+                }`}
+              >
+                <span className="flex-1 ms-3 whitespace-nowrap">Carts</span>
               </a>
             </li>
           </ul>

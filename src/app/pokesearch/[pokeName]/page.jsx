@@ -32,7 +32,7 @@ function PokeResult() {
 
   return (
     <div className='p-24'>
-        <Link href="/pokemon" className='bg-blue-500 text-white p-3 rounded-md'>Go Back</Link>
+        <Link href="/" className='bg-blue-500 text-white p-3 rounded-md'>Go Back</Link>
         <div className='flex justify-center items-center mt-10 text-center'>
             <div className='shadow-md p-10 rounded-md'>
                 {loading ? (

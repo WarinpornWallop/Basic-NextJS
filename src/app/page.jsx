@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import './styles/main.scss'
 import NextImage from "../../public/next.svg";
 import background from '../../public/daisy.jpg';
+import { useRouter } from "next/navigation";
 
 const StyledComponent = styled.div`
   background-color: #f0f0f0;
@@ -17,6 +18,7 @@ const StyledComponent = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
   return (
     <main className="h-screen  p-24 bg-[url('../../public/download.jpg')] bg-cover">
       {/* <Header />
@@ -26,7 +28,14 @@ export default function Home() {
       <div className="card">This is styling with sass</div> */}
       <p className="text-8xl font-bold mt-32">Hello!!</p>
       <p className="text-8xl font-bold">I&apos;m Tonnamwarineiei</p>
-      <button className="btn btn-primary mt-4">More About me</button>
+      <button
+        className="btn btn-primary mt-4"
+        onClick={() => {
+          router.push("/about");
+        }}
+      >
+        More About me
+      </button>
     </main>
   );
 }
