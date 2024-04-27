@@ -25,7 +25,7 @@ export default function Home() {
       <StyledComponent>This is a styled component in NextJS</StyledComponent>
       <div className="card">This is styling with sass</div> */}
       <p className="text-8xl font-bold mt-32">Hello!!</p>
-      <p className="text-8xl font-bold">I'm Tonnamwarineiei</p>
+      <p className="text-8xl font-bold">I&apos;m Tonnamwarineiei</p>
       <button className="btn btn-primary mt-4">More About me</button>
     </main>
   );
