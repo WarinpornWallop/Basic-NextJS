@@ -15,7 +15,7 @@ function Sidebar() {
     <div>
       <aside
         id="cta-button-sidebar"
-        className="w-full h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="fix top-0 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-[#FF9398]">
