@@ -5,6 +5,7 @@ const nextConfig = {
       "upload.wikimedia.org",
       "raw.githubusercontent.com",
       "cdn.dummyjson.com",
+      "images.unsplash.com",
     ], //Domain ภายนอกของรูป ตอนที่เอารูปมาเป็นลิงก์
   },
 };
