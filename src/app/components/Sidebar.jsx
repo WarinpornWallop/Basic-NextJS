@@ -40,7 +40,8 @@ function Sidebar() {
                   !pathname.includes("/education") &&
                   !pathname.includes("/contact") &&
                   !pathname.includes("/cart") &&
-                  !pathname.includes("/pokemon")
+                  !pathname.includes("/pokemon") &&
+                  !pathname.includes("/princess")
                     ? "bg-primary text-white"
                     : ""
                 }`}
@@ -106,6 +107,18 @@ function Sidebar() {
                 }`}
               >
                 <span className="flex-1 ms-3 whitespace-nowrap">Carts</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/princess"
+                className={`flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group ${
+                  pathname.includes("/princess") ? "bg-primary text-white" : ""
+                }`}
+              >
+                <span className="flex-1 ms-3 whitespace-nowrap">
+                  Save the Princess
+                </span>
               </a>
             </li>
           </ul>

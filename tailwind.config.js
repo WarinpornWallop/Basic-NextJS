@@ -13,24 +13,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-  },
+  },              
+  //custom daisyui theme
   plugins: [require("daisyui")],
   daisyui: {
-    // themes: ["cupcake"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
-    // themes: [
-    //   {
-    //     mytheme: {
-    //       primary: "#F98A05",
-    //       secondary: "#1E9146",
-    //       accent: "#B4B4B4",
-    //       neutral: "#000000",
-    //       "base-100": "#ffffff",
-    //       info: "#E5FFFDCC",
-    //       success: "#C2DEDC",
-    //       warning: "#FFF2E4",
-    //       error: "#F1D3B4",
-    //     },
-    //   },
     themes: [
       {
         mytheme: {

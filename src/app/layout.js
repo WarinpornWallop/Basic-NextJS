@@ -17,11 +17,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="grid grid-cols-6 bg-white">
-          {pathname.includes("/admin") ? <SideNav /> : <Sidebar />}
-
-          <div className="w-full col-span-5 bg-white">{children}</div>
-        </div>
+        
+          {pathname.includes("/login") ? (
+            <div className="grid grid-cols-6 bg-white">
+            <div className="w-full col-span-6 bg-white">{children}</div>
+            </div>
+          ) : (
+            <div className="row grid grid-cols-6 bg-white">
+              
+                <Sidebar />
+           
+              <div className="w-full col-span-5 bg-white">{children}</div>
+            </div>
+          )}
       </body>
     </html>
   );
